@@ -29,7 +29,7 @@ function setup() {
 		isStatic:false,
 		restitution:0.3,
 		friction:0,
-		density:1.2
+		density:1.2,
 	}
 	
 	ball = Bodies.circle(200,120,20,ball_options);
@@ -42,12 +42,15 @@ function setup() {
 
 function draw() {
 Engine.update(engine);
-  background(51);
-
+  background("black");
+fill("white")
 ellipse(ball.position.x, ball.position.y, 20);
+fill(127)
 down.display();
+fill("yellow");
 right.display();
 left.display();
+fill(127)
 top_wall.display();
 right_wall.display();
 left_wall.display();
